@@ -1,0 +1,30 @@
+/* css/asteroids.css */
+
+
+#col-md-12{
+     background-color: rgba(98, 255, 55, 0.708);
+}
+
+/* Efecto de brillo sutil en las filas */
+#asteroids-table tbody tr:hover {
+    background-color: rgba(55, 152, 255, 0.708);
+    transition: 0.3s ease;
+}
+
+/* Estilo para los nombres de asteroides */
+.asteroid-name {
+    font-weight: 600;
+    color: #404372;
+}
+
+/* Animación de pulso para asteroides peligrosos */
+.pulse-danger {
+    animation: pulse-red 2s infinite;
+    border-radius: 50%;
+}
+
+@keyframes pulse-red {
+    0% { box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(220, 53, 69, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(220, 53, 69, 0); }
+}

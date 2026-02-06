@@ -1,0 +1,45 @@
+
+
+/* Contenedor de la lista */
+#youtube-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Estilo del ítem de canal */
+.yt-subscription-item {
+    display: flex !important;
+    align-items: center;
+    padding: 8px 12px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #ebedef;
+    /* Esto evita que se vea mal en zooms altos */
+    min-width: 180px; 
+}
+
+/* Imagen del canal */
+.yt-thumb {
+    width: 40px !important;
+    height: 40px !important;
+    flex-shrink: 0; /* IMPRESCINDIBLE: evita que la foto se aplaste */
+    border-radius: 50%;
+    margin-right: 12px;
+    object-fit: cover;
+}
+
+/* Contenedor de texto */
+.yt-text-container {
+    flex-grow: 1;
+    min-width: 0; /* Permite que el truncado de texto funcione */
+}
+
+.yt-channel-name {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Pone los "..." si el nombre es muy largo */
+}

@@ -35,8 +35,8 @@ if ('geolocation' in navigator) {
         document.getElementById('temperatura').textContent = Math.floor(temperatura) + ' °C';
         document.getElementById('icono').src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
         document.getElementById('descripcion').textContent = description;
-        document.getElementById('temp_min').textContent = 'Min: ' + Math.floor(temp_min) + ' °C';
-        document.getElementById('temp_max').textContent = 'Max: ' + Math.floor(temp_max) + ' °C';
+        document.getElementById('temp_min').textContent = ' ' + Math.floor(temp_min) + ' °C';
+        document.getElementById('temp_max').textContent = ' ' + Math.floor(temp_max) + ' °C';
         document.getElementById('pais').textContent = pais;
 
 

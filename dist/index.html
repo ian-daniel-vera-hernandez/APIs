@@ -5,7 +5,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="referrer" content="no-referrer-when-downgrade">
-  <title>APIs Daddy Arvizu</title>
+  <title>APIs, chismes y más</title>
   <!--begin::Accessibility Meta Tags-->
   <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin-allow-popups">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
@@ -600,50 +600,73 @@
           <div class="row">
             <!--begin::Col-->
             <div class="col-lg-3 col-6">
-              <!--begin::Small Box Widget 1-->
-
-           <div class="row g-3"> <div class="col-xl-8 col-lg-7 col-12">
-        <div class="card card-primary card-outline h-100 shadow-sm">
-            <div class="card-header">
-                <h3 class="card-title text-bold">🚀 Asteroides Cercanos</h3>
+               <!--begin::Small Box Widget 1-->
             </div>
-            <div class="card-body p-0">
-                <div class="table-responsive">
-                    <table class="table table-striped table-valign-middle mb-0" id="asteroids-table">
-                        <thead>
-                            <tr>
-                                <th>Nombre</th>
-                                <th>Peligroso</th>
-                                <th>Diámetro</th>
-                                <th>Velocidad</th>
-                            </tr>
-                        </thead>
-                        <tbody id="asteroids-body">
-                            </tbody>
-                    </table>
+          </div>
+          <div>
+          <p>Sabemos que te preocupa mucho el riesgo de morir aplastado por una roca espacial mientras caminas de la calle.
+          Pero no temas usuario, nosotros hicimos el trabajo de preguntarle a la NASA por ti y para que no te esfuerces haciendo
+          los calculos a mano te mostramos aquí que no hay de que preocuparse  
+          </p>
+          </div>
+    <!--NASA-->
+          <div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card card-primary card-outline shadow-sm">
+                <div class="card-header">
+                    <h3 class="card-title text-bold">🚀 Asteroides Cercanos a la Tierra</h3>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-valign-middle mb-0" id="asteroids-table">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Peligroso</th>
+                                    <th>Diámetro (m)</th>
+                                    <th>Velocidad (km/h)</th>
+                                </tr>
+                            </thead>
+                            <tbody id="asteroids-body">
+                                </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="col-xl-4 col-lg-5 col-12">
-        <div class="card card-outline card-danger h-100 shadow-sm">
-            <div class="card-header">
-                <h3 class="card-title text-sm text-bold">
-                    <i class="fab fa-youtube text-danger me-2"></i> Mis Canales
-                </h3>
-            </div>
-            <div class="card-body p-2">
-                <div id="youtube-info">
-                    <p class="text-center text-muted small py-4">Por favor inicia sesión para ver tus canales de YouTube...</p>
+     <div>
+          <p>Ahora que ya ha pasado tu preocupación inicial ¿Por que no revisas si tu Youtuber favorito está en vivo?. Puedes ver aquí los canales que sigues.</p>
+          </div>
+<!--youtube-->
+    <div class="row">
+        <div class="col-12">
+            <div class="card card-outline card-danger shadow-sm">
+                <div class="card-header">
+                    <h3 class="card-title text-bold">
+                      <div class="d-flex justify-content-between align-items-center mb-3">
+    <h5 class="mb-0">Mis Canales</h5>
+    <button onclick="refrescarTodosLosCanales()" class="btn btn-sm btn-outline-danger">
+        <i class="fas fa-sync-alt"></i> Actualizar Estados
+    </button>
+</div>
+<div id="youtube-info" class="row">
+    </div>
+                        <i class="fab fa-youtube text-danger me-2"></i> Mis Canales de YouTube
+                    </h3>
                 </div>
-            </div>
-            <div class="card-footer p-1 text-center bg-white">
-                <small class="text-muted" style="font-size: 10px;">YouTube API v3</small>
+                <div class="card-body">
+                    <div id="youtube-info" class="row g-3">
+                        </div>
+                </div>
+                <div class="card-footer text-center bg-white p-1">
+                    <small class="text-muted">YouTube API v3</small>
+                </div>
             </div>
         </div>
     </div>
-
 </div>
 
 

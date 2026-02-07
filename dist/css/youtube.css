@@ -43,3 +43,61 @@
     overflow: hidden;
     text-overflow: ellipsis; /* Pone los "..." si el nombre es muy largo */
 }
+
+.badge-live {
+    background-color: #ff0000;
+    color: white;
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+    animation: pulse-live 2s infinite;
+}
+
+.badge-offline {
+    background-color: #e0e0e0;
+    color: #777;
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+@keyframes pulse-live {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* El badge que te faltaba */
+.badge-live {
+    background-color: #ff0000; /* Rojo YouTube */
+    color: white;
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+    animation: pulse-animation 2s infinite;
+}
+
+/* Animación para que el "EN VIVO" llame la atención */
+@keyframes pulse-animation {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+/* Evitar que las tarjetas se estiren feo */
+.yt-subscription-item {
+    background: white;
+    padding: 12px;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+
+.yt-subscription-item:hover {
+    border-color: #ff0000 !important;
+    background-color: #fffafa;
+}

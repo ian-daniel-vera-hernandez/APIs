@@ -83,21 +83,82 @@ async function cargarDatosYouTube() {
     }
 }
 
-function mostrarSuscripciones(channels) {
+async function mostrarSuscripciones(channels) {
     const contenedor = document.getElementById("youtube-info");
     contenedor.innerHTML = ''; 
 
-    channels.forEach(item => {
+    for (const item of channels) {
+        const channelId = item.snippet.resourceId.channelId;
+        const channelTitle = item.snippet.title;
+        const thumb = item.snippet.thumbnails.default.url;
+        const badgeId = `live-badge-${channelId}`;
+        const liveUrl = `https://www.youtube.com/channel/${channelId}/live`;
+
         contenedor.innerHTML += `
-            <div class="yt-subscription-item">
-                <img src="${item.snippet.thumbnails.default.url}" class="yt-thumb">
-                <div class="yt-text-container">
-                    <span class="yt-channel-name">${item.snippet.title}</span>
-                    <small class="text-muted">YouTube</small>
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-3">
+                <div class="yt-subscription-item shadow-sm border">
+                    <a href="${liveUrl}" target="_blank" class="d-flex align-items-center w-100 text-decoration-none text-dark">
+                        <img src="${thumb}" class="yt-thumb rounded-circle border">
+                        <div class="yt-text-container ms-3">
+                            <span class="yt-channel-name text-truncate d-block" style="max-width: 120px;">
+                                ${channelTitle}
+                            </span>
+                            <div id="${badgeId}">
+                                <span class="badge bg-light text-muted" style="font-size: 9px;">Verificando...</span>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         `;
-    });
+
+        // Llamada inmediata para verificar
+        actualizarEstadoLive(channelId, badgeId);
+    }
+}
+
+
+async function verificarSiEstaEnVivo(channelId) {
+    try {
+        // MÉTODO 1: Actividad reciente (rápido)
+        const activity = await gapi.client.youtube.activities.list({
+            "part": ["snippet", "contentDetails"],
+            "channelId": channelId,
+            "maxResults": 3
+        });
+
+        const tieneActividadLive = activity.result.items.some(item => 
+            item.snippet.type === 'upload' && item.contentDetails.upload
+        );
+
+        if (tieneActividadLive) return true;
+
+        // MÉTODO 2: Búsqueda directa (Backup)
+        const search = await gapi.client.youtube.search.list({
+            "part": ["snippet"],
+            "channelId": channelId,
+            "type": ["video"],
+            "eventType": "live"
+        });
+
+        return search.result.items.length > 0;
+    } catch (e) {
+        console.error("Error en canal " + channelId, e);
+        return false;
+    }
+}
+
+// Función separada para poder reutilizarla
+async function actualizarEstadoLive(channelId, badgeId) {
+    const estaEnVivo = await verificarSiEstaEnVivo(channelId);
+    const badgeElement = document.getElementById(badgeId);
+    if (badgeElement) {
+        if (estaEnVivo) {
+            badgeElement.innerHTML = `<span class="badge-live">● EN VIVO</span>`;
+        } else {
+            badgeElement.innerHTML = `<span class="badge-offline">Offline</span>`;
+        }
+    }
 }
 
 // Arrancar proceso

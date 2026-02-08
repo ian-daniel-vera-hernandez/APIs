@@ -1,0 +1,43 @@
+/* Estilos para la tabla de Jikan */
+
+.badge-jikan{
+background-color: #c96e1e;
+font-size: 12px;
+border-radius: 10%;
+ padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.anime-thumb {
+    width: 50px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(231, 135, 0, 0.94);
+}
+
+.table thead th {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: #000000;
+}
+
+
+
+
+.badge-airing {
+    background-color: #28a745; /* Verde para emisión */
+    font-size: 11px;
+}
+
+.badge-finished {
+    background-color: #6c757d; /* Gris para finalizado */
+    font-size: 11px;
+}
+
+.score-text {
+    font-weight: bold;
+    color: #ffc107; /* Color dorado para la nota */
+}

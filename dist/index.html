@@ -3,6 +3,9 @@
 <!--begin::Head-->
 
 <head>
+  <!--Llamada al CSS de Jikan API-->
+  <link rel="stylesheet" href="css/jikan.css">
+
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="referrer" content="no-referrer-when-downgrade">
   <title>APIs, chismes y más</title>
@@ -638,7 +641,7 @@
     </div>
 
      <div>
-          <p>Ahora que ya ha pasado tu preocupación inicial ¿Por que no revisas si tu Youtuber favorito está en vivo?. Puedes ver aquí los canales que sigues.</p>
+          <p>Ahora que ya ha pasado tu preocupación inicial ¿Por que no revisas si tu Youtuber favorito subió un video?. Puedes ver aquí los canales que sigues y pulsar sobre ellos, te llevará al video más reciente del usuario.</p>
           </div>
 <!--youtube-->
     <div class="row">
@@ -648,9 +651,10 @@
                     <h3 class="card-title text-bold">
                       <div class="d-flex justify-content-between align-items-center mb-3">
     <h5 class="mb-0">Mis Canales de YouTube  </h5><br>
+    <!--Comentado pq la API no permite saber esto al instante
     <button onclick="refrescarTodosLosCanales()" class="btn btn-sm btn-outline-danger">
         <i class="fas fa-sync-alt"></i> Actualizar Estados
-    </button>
+    </button>-->
 </div>
 <div id="youtube-info" class="row">
     </div>
@@ -667,7 +671,41 @@
             </div>
         </div>
     </div>
+
+     <div>
+          <p>¿Nada interesante? Por qué no miras un anime? Aqui tienes las tendencias del día directo desde japón de la mano de Jikan API</p>
+          </div>
+          
+<div class="container mt-5">
+    <div class="d-flex align-items-center mb-4">
+        <h2 class="me-3">Tendencias Anime</h2>
+        <span class="badge-jikan" >Jikan API</span>
+    </div>
+
+    <div class="card shadow-sm border-0">
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Portada</th>
+                            <th>Título del Anime</th>
+                            <th>Estudio</th>
+                            <th>Estado de Emisión</th>
+                            <th>Puntuación</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpo-tabla-anime">
+                        <tr>
+                            <td colspan="5" class="text-center p-4">Cargando programación de anime...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
+  </div>
 
 
              
@@ -914,6 +952,7 @@
   <!--Script de oauth y google-->
   <script src="https://accounts.google.com/gsi/client"></script>
   <script src="js/auth.js"></script>
+  <script src="js/jikan.js"></script>
   <!--end::Script-->
 </body>
 <!--end::Body-->

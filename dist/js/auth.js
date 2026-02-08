@@ -103,13 +103,14 @@ async function mostrarSuscripciones(channels) {
                             <span class="yt-channel-name text-truncate d-block" style="max-width: 120px;">
                                 ${channelTitle}
                             </span>
+                            <!-- Comentado por las limitaciones de la API de
                             <div id="${badgeId}">
                                 <span class="badge bg-light text-muted" style="font-size: 9px;">Verificando...</span>
                             </div>
                         </div>
                     </a>
                 </div>
-            </div>
+            </div>-->
         `;
 
         // Llamada inmediata para verificar

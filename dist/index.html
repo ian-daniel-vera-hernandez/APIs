@@ -1,14 +1,13 @@
 <!doctype html>
 <html lang="es">
+  <link rel="stylesheet" href="css/guia.css">
 <!--begin::Head-->
 
 <head>
-  <!--Llamada al CSS de Jikan API-->
-  <link rel="stylesheet" href="css/jikan.css">
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="referrer" content="no-referrer-when-downgrade">
-  <title>APIs, chismes y más</title>
+  <title>Axios | Inicio</title>
   <!--begin::Accessibility Meta Tags-->
   <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin-allow-popups">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
@@ -95,19 +94,7 @@
           
           <!--end::Fullscreen Toggle-->
           <!--begin::User Menu Dropdown-->
-          <!--Comienzo del botón de iniciar sesión con google-->
-
-  <li class="nav-item">
-    <div id="google_btn_container"
-      style="min-width: 200px; display: flex; align-items: center; justify-content: center; height: 100%;">
-      <div id="g_id_onload" data-client_id="177089609577-bsulfpm58lttoqqje7jo3i5mc0gtqcf5.apps.googleusercontent.com"
-        data-context="signin" data-ux_mode="popup" data-callback="handleCredentialResponse" data-auto_prompt="false">
-      </div>
-      <div class="g_id_signin" data-type="standard" data-shape="rectangular" data-theme="outline"
-        data-text="signin_with" data-size="large" data-logo_alignment="left">
-      </div>
-    </div>
-  </li>
+          
           <!--end::User Menu Dropdown-->
         </ul>
         <!--end::End Navbar Links-->
@@ -149,19 +136,19 @@
                 <li class="nav-item">
                   <a href="./index.html" class="nav-link active">
                     <i class="nav-icon bi bi-circle"></i>
-                    <p>Novedades</p>
+                    <p>Guia de usuario</p>
                   </a>
                 </li>
                 <li class="nav-item">
                   <a href="./index2.html" class="nav-link">
                     <i class="nav-icon bi bi-circle"></i>
-                    <p>Clima</p>
+                    <p>Clima y ambiente</p>
                   </a>
                 </li>
                 <li class="nav-item">
                   <a href="./index3.html" class="nav-link">
                     <i class="nav-icon bi bi-circle"></i>
-                    <p>Dashboard v3</p>
+                    <p>Novedades</p>
                   </a>
                 </li>
               </ul>
@@ -583,7 +570,7 @@
           <!--begin::Row-->
           <div class="row">
             <div class="col-sm-6">
-              <h3 class="mb-0">Mientras no estabas...</h3>
+              <h3 class="mb-0">Guia de usuario</h3>
             </div>
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-end">
@@ -606,109 +593,132 @@
                <!--begin::Small Box Widget 1-->
             </div>
           </div>
-          <div>
-          <p>Sabemos que te preocupa mucho el riesgo de morir aplastado por una roca espacial mientras caminas de la calle.
-          Pero no temas usuario, nosotros hicimos el trabajo de preguntarle a la NASA por ti y para que no te esfuerces haciendo
-          los calculos a mano te mostramos aquí que no hay de que preocuparse  
-          </p>
-          </div>
-    <!--NASA-->
-          <div class="container-fluid">
-    <div class="row mb-4">
-        <div class="col-12">
-            <div class="card card-primary card-outline shadow-sm">
-                <div class="card-header">
-                    <h3 class="card-title text-bold">🚀 Asteroides Cercanos a la Tierra</h3>
-                </div>
-                <div class="card-body p-0">
-                    <div class="table-responsive">
-                        <table class="table table-striped table-valign-middle mb-0" id="asteroids-table">
-                            <thead>
-                                <tr>
-                                    <th>Nombre</th>
-                                    <th>Peligroso</th>
-                                    <th>Diámetro (m)</th>
-                                    <th>Velocidad (km/h)</th>
-                                </tr>
-                            </thead>
-                            <tbody id="asteroids-body">
-                                </tbody>
-                        </table>
+          <div class="app-content-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3 class="mb-0">Documentación del Sistema</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="app-content">
+    <div class="guide-container">
+        
+        <div class="guide-hero">
+            <h1>Bienvenido a Axios Dashboard</h1>
+            <p>Esta plataforma centraliza información en tiempo real sobre clima, entretenimiento y datos científicos. A continuación, encontrarás una guía detallada sobre cómo navegar y utilizar los módulos de Novedades y Clima.</p>
+        </div>
+
+        <section class="guide-section">
+            <h2 class="section-title">Módulo de Novedades</h2>
+            <div class="features-grid">
+                
+                <article class="feature-card">
+                    <div class="feature-icon text-primary">
+                        <i class="bi bi-google"></i>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                    <span class="api-badge">Google Auth</span>
+                    <h3>Acceso y Seguridad</h3>
+                    <p>El sistema cuenta con un botón de inicio de sesión integrado con Google en la barra superior derecha.</p>
+                    <ul class="feature-list">
+                        <li>Permite personalizar la experiencia del usuario.</li>
+                        <li>Gestiona tokens de sesión de forma segura.</li>
+                        <li>Requisito previo para acceder a funciones personalizadas.</li>
+                    </ul>
+                </article>
 
-     <div>
-          <p>Ahora que ya ha pasado tu preocupación inicial ¿Por que no revisas si tu Youtuber favorito subió un video?. Puedes ver aquí los canales que sigues y pulsar sobre ellos, te llevará al video más reciente del usuario.</p>
-          </div>
-<!--youtube-->
-    <div class="row">
-        <div class="col-12">
-            <div class="card card-outline card-danger shadow-sm">
-                <div class="card-header">
-                    <h3 class="card-title text-bold">
-                      <div class="d-flex justify-content-between align-items-center mb-3">
-    <h5 class="mb-0">Mis Canales de YouTube  </h5><br>
-    <!--Comentado pq la API no permite saber esto al instante
-    <button onclick="refrescarTodosLosCanales()" class="btn btn-sm btn-outline-danger">
-        <i class="fas fa-sync-alt"></i> Actualizar Estados
-    </button>-->
+                <article class="feature-card">
+                    <div class="feature-icon text-indigo">
+                        <i class="bi bi-rocket-takeoff"></i>
+                    </div>
+                    <span class="api-badge nasa">NASA API</span>
+                    <h3>Monitor de Asteroides</h3>
+                    <p>Visualiza en tiempo real los objetos cercanos a la Tierra (NEOs) para tu tranquilidad (o pánico).</p>
+                    <ul class="feature-list">
+                        <li><strong>Peligrosidad:</strong> Indica si el objeto representa una amenaza.</li>
+                        <li><strong>Diámetro:</strong> Tamaño estimado en metros.</li>
+                        <li><strong>Velocidad:</strong> Rapidez de desplazamiento en km/h.</li>
+                    </ul>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon text-danger">
+                        <i class="bi bi-youtube"></i>
+                    </div>
+                    <span class="api-badge youtube">YouTube Data API v3</span>
+                    <h3>Mis Canales</h3>
+                    <p>Mantente al día con tus creadores de contenido favoritos sin salir de la pagina.</p>
+                    <ul class="feature-list">
+                        <li>Muestra los canales a los que estás suscrito.</li>
+                        <li>Acceso directo al video más reciente subido.</li>
+                    </ul>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon text-info">
+                        <i class="bi bi-tv"></i>
+                    </div>
+                    <span class="api-badge jikan">Jikan API</span>
+                    <h3>Tendencias de Anime</h3>
+                    <p>Consulta el top de animes populares directamente desde MyAnimeList.</p>
+                    <ul class="feature-list">
+                        <li>Ranking actualizado diariamente.</li>
+                        <li>Información de estudio de animación y estado de emisión.</li>
+                        <li>Puntuación global de la comunidad.</li>
+                    </ul>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="guide-section">
+            <h2 class="section-title">Módulo de Clima y Ambiente</h2>
+            <div class="features-grid">
+
+                <article class="feature-card">
+                    <div class="feature-icon text-warning">
+                        <i class="bi bi-cloud-sun"></i>
+                    </div>
+                    <span class="api-badge">OpenWeather</span>
+                    <h3>Meteorología Local</h3>
+                    <p>Información detallada sobre el clima actual de tu ubicacion.</p>
+                    <ul class="feature-list">
+                        <li>Temperatura actual, mínima y máxima.</li>
+                        <li>Notas sobre el clima.</li>
+                        <li>Iconografía visual del estado del cielo.</li>
+                    </ul>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon text-success">
+                        <i class="bi bi-music-note-beamed"></i>
+                    </div>
+                    <span class="api-badge supabase">Supabase DB</span>
+                    <h3>Playlist Atmosférica</h3>
+                    <p>El sistema recomienda música basada en el "vibe" del clima, conectando emociones con meteorología.</p>
+                    <ul class="feature-list">
+                        <li>Tabla conectada a base de datos en tiempo real.</li>
+                        <li>Clasificación de canciones por "Clima Ideal".</li>
+                        <li>Reflexión sobre la conexión música-clima.</li>
+                    </ul>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="guide-section">
+            <div class="alert alert-info shadow-sm" role="alert">
+                <h4 class="alert-heading"><i class="bi bi-info-circle-fill me-2"></i>¿Necesitas más ayuda?</h4>
+                <p>Si alguna de las APIs no carga correctamente (NASA, YouTube, etc.), verifica tu conexión a internet y asegúrate de haber iniciado sesión con Google para habilitar los permisos necesarios.</p>
+                <hr>
+                <p class="mb-0">Para soporte técnico, contacta al administrador en el pie de página (El mejor ingeniero).</p>
+            </div>
+        </section>
+
+    </div>
 </div>
-<div id="youtube-info" class="row">
-    </div>
-                        <i class="fab fa-youtube text-danger me-2"></i> 
-                    </h3>
-                </div>
-                <div class="card-body">
-                    <div id="youtube-info" class="row g-3">
-                        </div>
-                </div>
-                <div class="card-footer text-center bg-white p-1">
-                    <small class="text-muted">YouTube API v3</small>
-                </div>
-            </div>
-        </div>
-    </div>
-
-     <div>
-          <p>¿Nada interesante? Por qué no miras un anime? Aqui tienes las tendencias del día directo desde japón de la mano de Jikan API</p>
-          </div>
-          
-<div class="container mt-5">
-    <div class="d-flex align-items-center mb-4">
-        <h2 class="me-3">Tendencias Anime</h2>
-        <span class="badge-jikan" >Jikan API</span>
-    </div>
-
-    <div class="card shadow-sm border-0">
-        <div class="card-body p-0">
-            <div class="table-responsive">
-                <table class="table table-hover align-middle mb-0">
-                    <thead class="table-light">
-                        <tr>
-                            <th>Portada</th>
-                            <th>Título del Anime</th>
-                            <th>Estudio</th>
-                            <th>Estado de Emisión</th>
-                            <th>Puntuación</th>
-                        </tr>
-                    </thead>
-                    <tbody id="cuerpo-tabla-anime">
-                        <tr>
-                            <td colspan="5" class="text-center p-4">Cargando programación de anime...</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</div>
-  </div>
-
-
-             
               <!--end::Small Box Widget 1-->
 
               <!--end::Col-->

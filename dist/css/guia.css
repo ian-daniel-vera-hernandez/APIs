@@ -1,0 +1,136 @@
+/* css/guia.css */
+
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --bg-card: #ffffff;
+  --text-main: #212529;
+  --text-muted: #6c757d;
+  --border-radius: 12px;
+  --shadow-soft: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Modo oscuro (compatible con AdminLTE) */
+[data-bs-theme="dark"] {
+  --bg-card: #343a40;
+  --text-main: #f8f9fa;
+  --text-muted: #adb5bd;
+}
+
+.guide-container {
+  padding: 2rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.guide-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.guide-hero h1 {
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.guide-hero p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Estilos de las Secciones */
+.guide-section {
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  border-left: 5px solid var(--primary-color);
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* Grid de Tarjetas */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background-color: var(--bg-card);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Lista de pasos o detalles */
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.feature-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.feature-list li::before {
+  content: "•";
+  color: var(--primary-color);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Badges para las APIs */
+.api-badge {
+  display: inline-block;
+  padding: 0.25em 0.6em;
+  font-size: 0.75em;
+  font-weight: 700;
+  color: #fff;
+  background-color: var(--primary-color);
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.api-badge.nasa { background-color: #0b3d91; }
+.api-badge.youtube { background-color: #ff0000; }
+.api-badge.jikan { background-color: #2e51a2; }
+.api-badge.supabase { background-color: #3ecf8e; }

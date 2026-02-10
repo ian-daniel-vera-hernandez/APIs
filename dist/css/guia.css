@@ -132,5 +132,5 @@
 
 .api-badge.nasa { background-color: #0b3d91; }
 .api-badge.youtube { background-color: #ff0000; }
-.api-badge.jikan { background-color: #2e51a2; }
+.api-badge.jikan { background-color: rgba(231, 135, 0, 0.94); }
 .api-badge.supabase { background-color: #3ecf8e; }
